@@ -28,7 +28,7 @@ SECRET_KEY = SECRET_KEY
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -41,20 +41,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'corsheaders',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     'core',
     'users',
     'products'
->>>>>>> ec8ab5a (Create : project modeling)
-=======
-    'core',
-    'users',
-    'products'
->>>>>>> e84fc1a (Create : users signin)
-]
 
+]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -160,10 +151,6 @@ CORS_ALLOW_HEADERS = (
 
 APPEND_SLASH = False
 
-<<<<<<< HEAD
-pymysql.install_as_MySQLdb()
-=======
 pymysql.install_as_MySQLdb()
 
 ALGORITHM = ALGORITHM 
->>>>>>> e84fc1a (Create : users signin)

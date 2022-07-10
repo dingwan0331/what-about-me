@@ -1,10 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 from django.shortcuts import render
 
 # Create your views here.
 =======
 import requests
 
+=======
+import requests
+
+>>>>>>> 077b601 (Create : users signin)
 import jwt
 
 from django.views import View
@@ -36,4 +41,7 @@ class SigninView(View):
         
         except Kakao_Token_Error as error:
             return JsonResponse({'message' : error.message}, status = 401)
+<<<<<<< HEAD
 >>>>>>> e84fc1a (Create : users signin)
+=======
+>>>>>>> 077b601 (Create : users signin)
