@@ -41,6 +41,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'corsheaders',
+<<<<<<< HEAD
+=======
+    'core',
+    'users',
+    'products'
+>>>>>>> ec8ab5a (Create : project modeling)
 ]
 
 MIDDLEWARE = [
