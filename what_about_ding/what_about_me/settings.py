@@ -13,7 +13,11 @@ import pymysql
 
 from pathlib import Path
 
+<<<<<<< HEAD
 from my_settings import SECRET_KEY, DATABASES
+=======
+from my_settings import SECRET_KEY, DATABASES, ALGORITHM
+>>>>>>> e84fc1a (Create : users signin)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -42,11 +46,17 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'corsheaders',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     'core',
     'users',
     'products'
 >>>>>>> ec8ab5a (Create : project modeling)
+=======
+    'core',
+    'users',
+    'products'
+>>>>>>> e84fc1a (Create : users signin)
 ]
 
 MIDDLEWARE = [
@@ -154,4 +164,10 @@ CORS_ALLOW_HEADERS = (
 
 APPEND_SLASH = False
 
+<<<<<<< HEAD
 pymysql.install_as_MySQLdb()
+=======
+pymysql.install_as_MySQLdb()
+
+ALGORITHM = ALGORITHM 
+>>>>>>> e84fc1a (Create : users signin)
