@@ -4,7 +4,7 @@ from django.views     import View
 from django.http      import JsonResponse
 from django.db.models import Q, F, Min
 
-from products.models import Product
+from products.models import Product, Room
 
 class ProductsView(View):
     def get(self, request):
@@ -56,3 +56,34 @@ class ProductsView(View):
         ]
 
         return JsonResponse({'products' : result}, status = 200) 
+
+class ProductView(View):
+    def get(self, request, product_id):
+        product = Product.objects.get(id = product_id) 
+        results = {
+            'product' : {
+                'id'      : product.id,
+                'name'    : product.name,
+                'address' : product.address,
+                'latitude' : product.latitude,
+                'longtitude' : product.longtitude,
+                'images' : [
+                    {
+                        'url'     : image.url,
+                        'is_main' : image.is_main
+                    }
+                    for image in product.productimage_set.all()
+                ],
+                'rooms' : [
+                    {
+                        'id' : room.id,
+                        'name' : room.name,
+                        'price' : room.price,
+                        'image' : room.image_url,
+                        'check_in' : room.check_in,
+                        'check_out' : room.check_out
+                    }
+                    for room in product.room_set.all()
+                ]
+            }
+        }
